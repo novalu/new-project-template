@@ -42,8 +42,8 @@ import android.widget.Button;
  * is available.
  *
  */
-public class MainActivity extends Activity {
-    private static final String TAG = MainActivity.class.getSimpleName();
+public class SecondActivity extends Activity {
+    private static final String TAG = SecondActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,13 +53,12 @@ public class MainActivity extends Activity {
     }
 
     private void initUi() {
-        setContentView(R.layout.activity_main);
-        Button button = findViewById(R.id.foo);
+        setContentView(R.layout.activity_second);
+        Button button = findViewById(R.id.bar);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }
